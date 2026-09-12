@@ -66,7 +66,7 @@ clic_gateway   - 3-stage synchronizer for metastability protection. Generates pe
 clic_define    - SystemVerilog package with global parameters (64 sources,
                  base address, register offsets).
 
-
+```text
 Register Map
 
 Each interrupt source has a 4-byte configuration block:
@@ -82,6 +82,7 @@ Each interrupt source has a 4-byte configuration block:
   0x400          mtvt_base_addr [31:0]                Machine Trap Vector Table
                                                       base address
 
+```
 
 Simulation
 
@@ -103,7 +104,7 @@ Test 4: Selective Hardware Vectoring (SHV)
 SHV enabled for Source 25. Vector address = mtvt_base (0x1000) + (25 * 4) = 0x1064.
 Result: cpu_vector_addr = 0x00001064. PASS.
 
-
+```text 
 FPGA Implementation
 
 Target: Digilent Basys 3 (Artix-7 xc7a35tcpg236-1)
@@ -114,7 +115,9 @@ Resource Utilization:
   Slice LUTs       918      20,800       4.41%
   Flip-Flops       1,152    41,600       2.77%
   I/O Pins         9        106          8.49%
+```
 
+```text
 Power Analysis:
   Total On-Chip Power    0.079 W
   Clocks                 0.056 W (70%)
@@ -129,8 +132,9 @@ Timing Summary:
   Worst Hold Slack       0.126 ns
   Worst Pulse Width Slack 4.500 ns
   All constraints met    Yes
+```
 
-
+```text
 Pin Mapping (Basys 3)
 
   Signal             Board Pin    Function
@@ -145,7 +149,9 @@ Pin Mapping (Basys 3)
   cpu_int_id[2]      U19          LED 2 (ID bit 2)
   cpu_int_id[3]      V19          LED 3 (ID bit 3)
 
+```
 
+```text
 Project Structure
 
 Interrupt-controller/
@@ -176,7 +182,7 @@ Interrupt-controller/
   LICENSE                - MIT License
   README.md
 
-
+``` 
 How to Use
 
 Simulation (Vivado):
