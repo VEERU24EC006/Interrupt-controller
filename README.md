@@ -18,7 +18,7 @@ Features
 - Memory-mapped register file at base address 0x0200_0000
 - Machine Trap Vector Table (MTVT) with configurable base address
 
-
+```text
 Architecture
 
                       +-------------------------------------------+
@@ -35,6 +35,7 @@ Architecture
                       |  +---------------------------------+      |
                       +-------------------------------------------+
 
+```
   clic_gateway.sv -- Per-source synchronizer + edge/level latch (standalone module)
 
 
